@@ -1,6 +1,6 @@
-{% set python_min = '3.9.6' %}
+{% set python_min = "3.9.6" %}
 {% set name = "nomad-camels-driver-voltcraft-pps" %}
-{% set version = "0.1.2" %}
+{% set version = "0.1.3" %}
 
 package:
   name: {{ name|lower }}
@@ -8,12 +8,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/nomad_camels_driver_voltcraft_pps-{{ version }}.tar.gz
-  sha256: 64c1757ef1a39c0056a7057ae225c95dc83f64029dd82b0a3bbf6c76822ff842
+  sha256: 55e0e6ce0afe11741cde5a94ebc0591cdb75bf13045dc8fe8ff59bd201c2a755
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
